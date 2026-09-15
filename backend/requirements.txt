@@ -1,0 +1,13 @@
+pydantic
+pydantic-settings
+fastapi
+uvicorn
+sqlalchemy
+psycopg 
+alembic
+pyjwt
+argon2-cffi
+email-validator
+yfinance
+redis
+pytest
