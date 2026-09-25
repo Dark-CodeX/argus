@@ -150,6 +150,9 @@ def ingest_historical_data(
     db.execute(statement)
     db.commit()
 
+    for key in redis_client.scan_iter(f"argus:market_prices:{asset_id}:*"):
+        redis_client.delete(key)
+
     return len(records)
 
 
@@ -173,7 +176,7 @@ def get_historical_prices(
 
         return [
             MarketPrice(
-                asset_id=item["asset_id"],
+                asset_id=UUID(item["asset_id"]),
                 price_date=date.fromisoformat(item["price_date"]),
                 open=Decimal(item["open"]),
                 high=Decimal(item["high"]),
