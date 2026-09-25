@@ -1,7 +1,7 @@
 from datetime import datetime
 from uuid import UUID
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class PortfolioCreate(BaseModel):
@@ -30,3 +30,4 @@ class PortfolioResponse(BaseModel):
     name: str
     description: str | None
     created_at: datetime
+    model_config = ConfigDict(from_attributes=True)
