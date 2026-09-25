@@ -16,6 +16,6 @@ if __name__ == "__main__":
     start_date = db.scalar(select(func.max(MarketPrice.price_date)).where(
         MarketPrice.asset_id == asset.id))
     if not start_date:
-        start_date = date(2023, 1, 1)
+        start_date = date(2016, 1, 1)
     count = ingest_historical_data(asset.id, start_date, date.today(), db)
     print(f"Inserted {count} rows for {symb}")
