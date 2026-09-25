@@ -28,7 +28,7 @@ class User(Base):
     )
 
     gender: Mapped[str] = mapped_column(
-        Enum("male","female", "other", name="gender_enum"),
+        Enum("male", "female", "other", name="gender_enum"),
         nullable=False,
     )
 
@@ -45,6 +45,6 @@ class User(Base):
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
-        default=datetime.now(timezone.utc),
+        default=lambda: datetime.now(timezone.utc),
         nullable=False,
     )
