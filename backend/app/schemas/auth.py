@@ -1,11 +1,12 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field
 
 
 class UserRegister(BaseModel):
     name: str
-    gender: str
+    gender: Literal["male", "female", "other"]
     email: EmailStr
     password: str = Field(min_length=8, max_length=128)
 
@@ -24,6 +25,6 @@ class UserResponse(BaseModel):
     id: str
     name: str
     email: EmailStr
-    gender: str
+    gender: Literal["male", "female", "other"]
     is_active: bool
     created_at: datetime

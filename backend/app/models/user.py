@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from typing import Literal
 from uuid import UUID, uuid4
 
 from sqlalchemy import Boolean, DateTime, String, Enum
@@ -27,7 +28,7 @@ class User(Base):
         nullable=False,
     )
 
-    gender: Mapped[str] = mapped_column(
+    gender: Mapped[Literal["male", "female", "other"]] = mapped_column(
         Enum("male", "female", "other", name="gender_enum"),
         nullable=False,
     )
