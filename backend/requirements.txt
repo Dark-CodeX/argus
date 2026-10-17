@@ -3,7 +3,7 @@ pydantic-settings
 fastapi
 uvicorn
 sqlalchemy
-psycopg 
+psycopg
 alembic
 pyjwt
 argon2-cffi
@@ -11,3 +11,8 @@ email-validator
 yfinance
 redis
 pytest
+pandas
+numpy
+scipy
+scikit-learn
+joblib
