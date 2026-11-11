@@ -130,3 +130,7 @@ htmlcov/
 tmp/
 
 .env
+
+backend/data/
+backend/app/ml/models/*.joblib
+.ipynb_checkpoints/
