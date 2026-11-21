@@ -1,0 +1,70 @@
+/* ==========================================================================
+   root.css — design tokens + light / dark themes.
+   Every colour in the app comes from these variables.
+   The theme is switched by <html data-theme="light|dark">.
+   ========================================================================== */
+
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* Ivory, bottle green, brass, oxblood */
+  --bg: #f3eee2;
+  --surface: #fbf8f0;
+  --surface-2: #ede6d4;
+  --ink: #1b2a23;
+  --ink-soft: #526058;
+  --ink-faint: #858c80;
+  --line: #d9cdb2;
+  --line-soft: #e6dcc6;
+
+  --accent: #1e4636;
+  --accent-hover: #17372b;
+  --accent-ink: #f7f2e4;
+  --brass: #96762f;
+  --gain: #2d6a48;
+  --loss: #86272f;
+
+  --focus: rgba(150, 118, 47, 0.38);
+  --overlay: rgba(27, 42, 35, 0.45);
+  --shadow: 0 1px 0 rgba(27, 42, 35, 0.04), 0 18px 40px -26px rgba(27, 42, 35, 0.35);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #101713;
+  --surface: #17211b;
+  --surface-2: #1e2a23;
+  --ink: #ebe4d0;
+  --ink-soft: #b3b8a8;
+  --ink-faint: #7c847a;
+  --line: #2c3a31;
+  --line-soft: #233029;
+
+  --accent: #c4a55a;
+  --accent-hover: #d3b86f;
+  --accent-ink: #14201a;
+  --brass: #c4a55a;
+  --gain: #7fb58f;
+  --loss: #d7838b;
+
+  --focus: rgba(196, 165, 90, 0.4);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 18px 40px -26px rgba(0, 0, 0, 0.8);
+}
+
+:root {
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+
+  --radius: 4px;
+  --maxw: 1120px;
+
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2.5rem;
+  --s5: 4rem;
+  --s6: 6rem;
+}
