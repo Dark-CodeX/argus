@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const CURRENCY = "USD"; // change to your portfolio currency
+const CURRENCY = "INR"; // change to your portfolio currency
 
 export const fmtMoney = (v) => {
   const n = Number(v);
