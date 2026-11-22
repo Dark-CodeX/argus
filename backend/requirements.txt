@@ -16,4 +16,3 @@ numpy
 scipy
 scikit-learn
 joblib
-gunicorn
